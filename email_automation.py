@@ -21,9 +21,8 @@ def send_result_emails(csv_file_path):
     success_count = 0
     
     try:
-        # 2. SMTP 서버 연결 (Gmail 기준)
-        # 만약 발송하는 메일이 네이버라면 아래 줄을 smtplib.SMTP('smtp.naver.com', 587) 로 변경하세요.
-        server = smtplib.SMTP('smtp.gmail.com', 587)
+        # 2. SMTP 서버 연결 (네이버 기준)
+        server = smtplib.SMTP('smtp.naver.com', 587)
         server.starttls()
         server.login(SENDER_EMAIL, SENDER_PASSWORD)
 
